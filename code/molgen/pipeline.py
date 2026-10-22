@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-pipeline.py - generate -> medicinal-chemistry gauntlet -> ranked shortlist.
+pipeline.py - generate -> filter -> ranked shortlist.
 
-Designed to think like a med chemist: generation is the cheap part, the value is
-in discrimination. Candidates flow cheap->expensive through structural alerts,
-property windows, synthesizability and novelty, then rank by a Derringer
-desirability composite.
+Candidates flow cheap->expensive through structural alerts, property windows,
+synthesizability and novelty, then rank by a Derringer desirability composite.
+
+Note on the synthesizability filter: PROFILES in medchem.py gates on an SAscore
+ceiling, and that ceiling is a chosen number, not a derived one. Any statement
+about SAscore's behaviour on a library produced by this pipeline is therefore
+circular (see AUDIT.md, Defect 1). Target-class calibrated cutoffs, measured
+against chemistry known to have been synthesized, are in code/synthesizability/.
 
 GENERATION BACKENDS
   --backend brics   : fragment recombination from a fragment library (no training)
@@ -37,15 +41,30 @@ OUTPUT
 """
 
 import argparse
+import os
 import sys
+
+# Python does not prepend the script's own directory to sys.path when
+# PYTHONSAFEPATH is set (or under `python -P`), so sibling imports below would
+# fail. Add it explicitly.
+_HERE = os.path.dirname(os.path.abspath(__file__))
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
 
 import pandas as pd
 from rdkit import Chem, RDLogger
 
-import medchem as mc
+import medchem as mc  # noqa: F401  (also puts code/synthesizability on sys.path)
 from generators import BRICSGenerator, CharRNNGenerator
+from standardize import Standardizer
 
 RDLogger.DisableLog("rdApp.*")
+
+# Standardize once per candidate, here, so that the structure written to the
+# output file is the same structure the properties were computed on. Calling
+# mc.compute_properties(standardize=True) would standardize internally and
+# silently return properties for a structure the caller never sees.
+_STD = Standardizer()
 
 
 # ---------------------------------------------------------------------------
@@ -92,8 +111,8 @@ def get_candidate_stream(args):
         # oversample: many candidates die in the gauntlet
         streams.append(bg.sample(args.target * args.oversample))
     if args.backend in ("rnn", "both"):
-        g = CharRNNGenerator.load(args.prior)
-        print(f"  RNN prior loaded on {g.device}")
+        g = CharRNNGenerator.load(args.prior, seed=args.seed)
+        print(f"  RNN prior loaded on {g.device} (seed={args.seed})")
         streams.append(g.sample(args.target * args.oversample,
                                 temperature=args.temperature))
 
@@ -131,12 +150,17 @@ def cmd_generate(args):
             n_dup += 1
             continue
         seen.add(smi)
-        mol = Chem.MolFromSmiles(smi)
+        raw = Chem.MolFromSmiles(smi)
+        if raw is None:
+            n_invalid += 1
+            continue
+        mol, _std_info = _STD.standardize(raw)
         if mol is None:
             n_invalid += 1
             continue
+        std_smi = Chem.MolToSmiles(mol, isomericSmiles=True)
 
-        props = mc.compute_properties(mol)
+        props = mc.compute_properties(mol, standardize=False)
         alerts = mc.structural_alerts(mol)
         ok, reasons = mc.passes_windows(props, alerts, args.profile)
 
@@ -148,7 +172,9 @@ def cmd_generate(args):
         D, comp = mc.desirability(props)
         scaf = mc.murcko_scaffold(mol)
         row = {
-            "smile": smi,
+            "smile": std_smi,          # the structure the properties below describe
+            "smile_as_generated": smi,  # pre-standardization, for provenance
+            "standardized_changed": std_smi != Chem.MolToSmiles(raw, isomericSmiles=True),
             "desirability": D,
             "qed": round(props["qed"], 3),
             "mw": round(props["mw"], 1),
@@ -159,6 +185,7 @@ def cmd_generate(args):
             "fsp3": round(props["fsp3"], 3),
             "n_aromatic_rings": props["n_aromatic_rings"],
             "n_stereo": props["n_stereo"],
+            "n_stereo_unassigned": props["n_stereo_unassigned"],
             "sa_score": round(props["sa"], 2),
             "n_alerts": len(alerts),
             "alerts": "; ".join(alerts[:5]),

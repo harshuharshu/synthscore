@@ -53,3 +53,46 @@ stereocentres that the generator had flattened. The `isomericSmiles=True` fix ca
 retroactively restore that information: the existing 5,000 SMILES carry none. It applies to
 future generation runs. Any stereochemical claim about the current library is unsupported and
 should be withdrawn rather than recomputed.
+
+
+---
+
+## Addendum: defects found in `pipeline.py` after the first pass
+
+`pipeline.py` was not read during the first repair pass. It was, and it partly undid three of
+the four fixes, because the repairs were made in the library modules and the CLI never picked
+them up. Found and fixed 2026-10-22, each verified by running the pipeline end to end.
+
+| # | Defect | Fix |
+|---|---|---|
+| 7 | **The reproducibility fix did not actually work for the BRICS backend.** RDKit's `BRICS.BRICSBuild` shuffles its reagent and seed lists with `random.shuffle(..., random=random.random)` -- the *module-level* RNG -- and exposes no seed argument. Moving `BRICSGenerator` to an instance RNG left the build order nondeterministic: two runs at `--seed 7` shared only **30 of 40** molecules. | `BRICSGenerator.__init__` now also seeds the module RNG. Verified: same seed gives byte-identical output, a different seed gives 0/40 overlap. |
+| 8 | **`--seed` was ignored on the RNN path.** `CharRNNGenerator.load()` took no seed, so every loaded prior sampled at the default 42 regardless of the flag. | `load(path, device=None, seed=42)`, and `pipeline.py` passes `args.seed`. |
+| 9 | **Properties described a structure the output file did not contain.** `compute_properties` standardizes internally, but the CSV's `smile` column, the Murcko scaffold, the novelty fingerprints and the LigPrep `.smi` all came from the raw generated SMILES. For a tautomer-canonicalized molecule those are different structures. | The pipeline standardizes once, explicitly, and everything downstream uses that molecule. Output now carries `smile` (standardized), `smile_as_generated`, and `standardized_changed`. |
+| 10 | **`n_stereo_unassigned` never reached the output.** The column was added to `compute_properties` but not to the pipeline's row dict, so the stereochemistry fix was invisible to anyone reading the CSV. | Emitted. |
+
+Two further defects, not in the original audit, surfaced while verifying:
+
+- **The script would not import under `PYTHONSAFEPATH=1`** (or `python -P`), because Python then
+  does not prepend the script's own directory to `sys.path` and the sibling imports fail. Fixed by
+  inserting `_HERE` explicitly. This is why nothing worked on the first run attempt.
+- **A BRICS-only run required PyTorch.** `generators.py` imported torch at module level, so
+  fragment recombination -- which needs nothing but RDKit -- could not run without a deep-learning
+  stack. The torch import is now guarded, the `nn.Module` subclass is built on first use, and
+  `@torch.no_grad()` is replaced by a shim that is a pass-through when torch is absent.
+  `CharRNNGenerator` raises a clear, actionable ImportError instead.
+
+The overselling docstring in `pipeline.py` ("generation is the cheap part, the value is in
+discrimination") was also removed, and replaced with a note that the SAscore ceiling in `PROFILES`
+is a chosen number, which is what makes any claim about SAscore's behaviour on the resulting
+library circular.
+
+### Verification run
+
+```
+python pipeline.py generate --backend brics --frags <400 library SMILES> --decompose \
+       --target 40 --oversample 20 --profile balanced --seed 7 -o out.csv
+```
+Exit 0. 40 molecules, 0 structural alerts in the top 10, standardization changed 0 of 40
+structures (BRICS output is neutral and single-component, so only tautomers can move, and none
+did in this sample). `n_stereo` equals `n_stereo_unassigned` for every molecule, which is the
+same flattened-stereochemistry signature reported for the published library.

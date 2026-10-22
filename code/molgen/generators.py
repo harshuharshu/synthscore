@@ -28,9 +28,20 @@ code emitted flat SMILES while the property panel counted stereocentres
 
 import random
 
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
+# PyTorch is required only by the char-RNN backend. The BRICS backend needs
+# nothing but RDKit, so a missing torch must not stop a fragment-recombination
+# run from importing this module.
+try:
+    import torch
+    import torch.nn as nn
+    import torch.nn.functional as F
+    _TORCH_ERROR = None
+except ImportError as _exc:            # pragma: no cover - environment dependent
+    torch = nn = F = None
+    _TORCH_ERROR = str(_exc)
+
+_TORCH_MSG = ("the char-RNN backend requires PyTorch, which is not installed "
+              "({}). Install it, or use --backend brics, which needs only RDKit.")
 
 from rdkit import Chem, RDLogger
 from rdkit.Chem import BRICS
@@ -45,7 +56,16 @@ class BRICSGenerator:
     def __init__(self, fragments, n_sample=4, seed=42):
         self.fragments = [f for f in fragments if Chem.MolFromSmiles(f) is not None]
         self.n_sample = n_sample
+        self.seed = seed
         self.rng = random.Random(seed)
+        # RDKit's BRICS.BRICSBuild shuffles its reagent and seed lists with
+        # `random.shuffle(..., random=random.random)` -- the MODULE-level RNG --
+        # and exposes no seed argument. Seeding only our instance RNG therefore
+        # leaves the build order nondeterministic across processes, which was
+        # measured: two runs at the same seed shared 30 of 40 molecules. Seed the
+        # module RNG as well. (The alternative, scrambleReagents=False, would
+        # make enumeration deterministic but change which molecules get built.)
+        random.seed(seed)
         if len(self.fragments) < n_sample:
             raise ValueError(f"Need >= {n_sample} valid fragments, have {len(self.fragments)}")
 
@@ -105,18 +125,38 @@ class SmilesVocab:
         return "".join(out)
 
 
-class CharRNN(nn.Module):
-    def __init__(self, vocab_size, emb=128, hidden=512, layers=3, dropout=0.2):
-        super().__init__()
-        self.embed = nn.Embedding(vocab_size, emb, padding_idx=0)
-        self.lstm = nn.LSTM(emb, hidden, layers, batch_first=True,
-                            dropout=dropout if layers > 1 else 0.0)
-        self.fc = nn.Linear(hidden, vocab_size)
+def _no_grad(fn):
+    """`@torch.no_grad()` is evaluated when the class body runs, which fails if
+    torch is absent. Fall back to a pass-through; methods that need torch raise
+    at construction time anyway."""
+    return fn if _TORCH_ERROR is not None else torch.no_grad()(fn)
 
-    def forward(self, x, hidden=None):
-        e = self.embed(x)
-        out, hidden = self.lstm(e, hidden)
-        return self.fc(out), hidden
+
+_CHARRNN_CLS = None
+
+
+def CharRNN(*args, **kwargs):
+    """The network subclasses torch.nn.Module, so its class body cannot be
+    executed at import time when torch is absent. Build it on first use."""
+    global _CHARRNN_CLS
+    if _TORCH_ERROR is not None:
+        raise ImportError(_TORCH_MSG.format(_TORCH_ERROR))
+    if _CHARRNN_CLS is None:
+        class _CharRNN(nn.Module):
+            def __init__(self, vocab_size, emb=128, hidden=512, layers=3, dropout=0.2):
+                super().__init__()
+                self.embed = nn.Embedding(vocab_size, emb, padding_idx=0)
+                self.lstm = nn.LSTM(emb, hidden, layers, batch_first=True,
+                                    dropout=dropout if layers > 1 else 0.0)
+                self.fc = nn.Linear(hidden, vocab_size)
+
+            def forward(self, x, hidden=None):
+                e = self.embed(x)
+                out, hidden = self.lstm(e, hidden)
+                return self.fc(out), hidden
+
+        _CHARRNN_CLS = _CharRNN
+    return _CHARRNN_CLS(*args, **kwargs)
 
 
 class CharRNNGenerator:
@@ -124,6 +164,8 @@ class CharRNNGenerator:
 
     def __init__(self, vocab=None, model=None, device=None, seed=42,
                  deterministic=False):
+        if _TORCH_ERROR is not None:
+            raise ImportError(_TORCH_MSG.format(_TORCH_ERROR))
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.vocab = vocab
         self.model = model.to(self.device) if model is not None else None
@@ -184,7 +226,7 @@ class CharRNNGenerator:
         return self
 
     # --- sampling ---
-    @torch.no_grad()
+    @_no_grad
     def sample(self, max_yield, temperature=1.0, max_len=120, batch=256):
         """Yield valid canonical SMILES sampled from the prior."""
         self.model.eval()
@@ -229,7 +271,10 @@ class CharRNNGenerator:
                     "layers": self.model.lstm.num_layers}, path)
 
     @classmethod
-    def load(cls, path, device=None):
+    def load(cls, path, device=None, seed=42):
+        """`seed` is forwarded to __init__, which seeds torch/CUDA/the instance RNG,
+        so sampling from a loaded prior is reproducible. Callers that expose a
+        --seed flag must pass it here; otherwise every run uses the default."""
         dev = device or ("cuda" if torch.cuda.is_available() else "cpu")
         ckpt = torch.load(path, map_location=dev)
         vocab = SmilesVocab.__new__(SmilesVocab)
@@ -237,4 +282,4 @@ class CharRNNGenerator:
         vocab.stoi = {c: i for i, c in enumerate(vocab.itos)}
         model = CharRNN(len(vocab), hidden=ckpt["hidden"], layers=ckpt["layers"])
         model.load_state_dict(ckpt["state_dict"])
-        return cls(vocab=vocab, model=model, device=dev)
+        return cls(vocab=vocab, model=model, device=dev, seed=seed)
