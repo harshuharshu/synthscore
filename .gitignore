@@ -1,0 +1,33 @@
+# Third-party model weights: fetched by code/synthesizability/fetch_vendor.py,
+# not redistributed here.
+code/synthesizability/vendor/scscore/model.ckpt-*.json.gz
+code/synthesizability/vendor/rascore/*.pkl
+code/synthesizability/vendor/brsascore/pickle/
+code/synthesizability/vendor/syba/
+
+# Third-party source we do not redistribute (the panel reimplements what it needs)
+code/synthesizability/vendor/brsascore/BRSAScore.py
+code/synthesizability/vendor/rascore/RAscore_XGB.py
+code/synthesizability/vendor/rascore/descriptors.py
+code/synthesizability/vendor/scscore/standalone_model_numpy.py
+
+# Per-class corpus shards: intermediates of data/chembl_targetclass_corpus.csv
+data/corpus_kinase.csv
+data/corpus_protease.csv
+data/corpus_gpcr_familyA.csv
+data/corpus_ion_channel.csv
+data/corpus_nuclear_receptor.csv
+data/corpus_transporter.csv
+data/corpus_epigenetic.csv
+data/corpus_oxidoreductase.csv
+data/corpus_antibacterial_wholecell.csv
+data/corpus_antibacterial.csv
+
+# Run logs and per-molecule detail dumps
+*.log
+data/property_delta_after_fixes.csv
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

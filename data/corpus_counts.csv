@@ -1,0 +1,10 @@
+target_class,n_compounds,n_rows,n_targets,heavy_median,heavy_q1,heavy_q3,pchembl_frac
+oxidoreductase,3021,3021,62,25.0,20.0,30.0,0.418
+ion_channel,3094,3094,47,27.0,22.0,33.0,0.658
+transporter,3006,3006,53,28.0,22.0,34.0,0.459
+epigenetic,3129,3129,46,29.0,24.0,36.0,0.481
+nuclear_receptor,3121,3121,45,29.0,25.0,33.0,0.394
+kinase,3012,3012,44,29.0,24.0,35.0,0.254
+protease,3016,3016,43,29.0,23.0,37.0,0.555
+antibacterial_wholecell,3007,3007,43,29.0,23.0,38.0,0.006
+gpcr_familyA,3107,3107,40,32.0,26.0,38.0,0.603

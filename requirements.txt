@@ -1,0 +1,9 @@
+# Scoring environment. The xgboost pin is load-bearing: RAscore's published
+# model was serialized by XGBoost 1.x and modern XGBoost refuses to unpickle it.
+rdkit>=2023.9
+pandas>=1.5
+numpy>=1.23
+scikit-learn>=1.2
+xgboost==1.7.*
+matplotlib>=3.6
+pytest>=7.0

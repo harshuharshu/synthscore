@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or the derived data, please cite it as below."
+title: "synthscore: target-class calibrated synthesizability scoring"
+abstract: >-
+  Synthesizability scores are deployed as hard filters with a single global
+  cutoff. Measured against 26,947 ChEMBL compounds that each carry a recorded
+  activity, and are therefore known to have been synthesized, those cutoffs
+  discard real chemistry at rates that depend on the target class rather than
+  the molecule: SAscore at its published cutoff of 6.0 rejects 9.48% of
+  whole-cell antibacterial compounds and 0.29% of nuclear-receptor compounds.
+  This package supplies per-target-class operating points calibrated to a
+  declared false-reject rate, and a tool that applies them.
+authors:
+  - family-names: "Tiwari"
+    given-names: "Harshita"
+version: "1.0.0"
+date-released: "2026-10-22"
+license: MIT
+keywords:
+  - synthetic accessibility
+  - synthesizability
+  - cheminformatics
+  - de novo design
+  - calibration
+  - ChEMBL
