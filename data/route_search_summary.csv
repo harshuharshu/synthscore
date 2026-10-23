@@ -1,0 +1,8 @@
+cell,known_status,n,solved,solved_pct,median_steps,median_search_s,rascore_median,sascore_median
+ZINC_purchasable,made (purchasable),25,22,88.0,1.0,42.9,0.979,3.2
+Enamine_on_demand,made (2-3 steps),25,11,44.0,4.0,63.2,0.94,3.29
+THQ_made_assayed,"made (1 step, assayed)",25,1,4.0,5.0,91.7,0.049,4.71
+THQ_library,"made (1 step, demonstrated)",25,0,0.0,5.0,87.3,0.05,4.81
+ChEMBL_kinase,made (steps unknown),25,14,56.0,3.0,64.7,0.96,2.87
+BRICS_generated,no evidence of existence,25,10,40.0,4.0,83.0,0.924,2.97
+GDB17_enumerated,no evidence of existence,25,0,0.0,5.0,75.1,0.09,5.66

@@ -1,0 +1,176 @@
+route_id,cell,known_status,smiles,sascore,rascore,brsascore
+ZINC_purchasable_00,ZINC_purchasable,made (purchasable),Cc1ncoc1C(=O)NCCC(F)(F)F,2.6696,0.9977,2.8541
+ZINC_purchasable_01,ZINC_purchasable,made (purchasable),C[C@H](CC1CCOCC1)CN(C)[C@@H](C)C1CC1,3.3529,0.957,4.8743
+ZINC_purchasable_02,ZINC_purchasable,made (purchasable),CC(C)[C@@H](C#N)NC(=O)c1nc(Br)cs1,3.5595,0.9935,4.13
+ZINC_purchasable_03,ZINC_purchasable,made (purchasable),COC1CC(NCCn2ccnc2C)C1,2.5958,0.9751,2.5135
+ZINC_purchasable_04,ZINC_purchasable,made (purchasable),CCN1CCCCC1C(=O)NC[C@@H]1CCSC1,3.3223,0.9911,3.6031
+ZINC_purchasable_05,ZINC_purchasable,made (purchasable),CC(C)=CCNC(=O)N(C)CCN(C)C,2.5739,0.9672,2.836
+ZINC_purchasable_06,ZINC_purchasable,made (purchasable),C[C@@H](NC(=O)C(C)(C)C#N)c1cn[nH]c1,3.5074,0.9794,4.0205
+ZINC_purchasable_07,ZINC_purchasable,made (purchasable),CCCN(C)CC(=O)N[C@H]1C[C@@H]1C(F)F,3.5168,0.9708,3.9507
+ZINC_purchasable_08,ZINC_purchasable,made (purchasable),CO[C@H](C)CN(C)C[C@H]1C[C@H]2CC[C@H]1C2,4.4354,0.9766,7.7299
+ZINC_purchasable_09,ZINC_purchasable,made (purchasable),CC(C)n1cncc1[C@@H]1NC(=O)CN1C,3.788,0.8415,5.6733
+ZINC_purchasable_10,ZINC_purchasable,made (purchasable),COCCN(C)CCN[C@H]1CC[C@H](C)C1,3.0044,0.9928,3.8859
+ZINC_purchasable_11,ZINC_purchasable,made (purchasable),Cc1occc1CN1C[C@H](C)CC[C@@H]1C,3.2017,0.9854,4.123
+ZINC_purchasable_12,ZINC_purchasable,made (purchasable),CC(=O)c1ccc(C#N)c(NCCF)c1,2.3339,0.9984,2.2173
+ZINC_purchasable_13,ZINC_purchasable,made (purchasable),CCOCCNC(=O)CC(CC)CC,2.1913,0.9885,2.4686
+ZINC_purchasable_14,ZINC_purchasable,made (purchasable),Cc1ccc(F)cc1Cn1ccsc1=O,2.321,0.9802,2.9157
+ZINC_purchasable_15,ZINC_purchasable,made (purchasable),C[C@@H](C[S@+](C)[O-])NC(=O)C1CCCO1,4.3228,0.9629,5.496
+ZINC_purchasable_16,ZINC_purchasable,made (purchasable),CC(NC(=O)CSCC#N)C(=O)OC(C)(C)C,2.9331,0.9927,3.5018
+ZINC_purchasable_17,ZINC_purchasable,made (purchasable),Clc1cc(CNc2nnco2)ccc1Br,2.7148,0.9962,2.9875
+ZINC_purchasable_18,ZINC_purchasable,made (purchasable),COCC1(NS(=O)(=O)c2c[nH]cn2)CC1,3.5196,0.9092,3.1201
+ZINC_purchasable_19,ZINC_purchasable,made (purchasable),CSCN1C(=O)c2cccnc2S1(=O)=O,3.2806,0.6442,5.3283
+ZINC_purchasable_20,ZINC_purchasable,made (purchasable),CC(C)CNC(=O)N[C@H](CCN)C(F)F,3.1799,0.988,5.2258
+ZINC_purchasable_21,ZINC_purchasable,made (purchasable),O=C(NCC(F)F)C1(c2ccc(I)cc2)CC1,2.5549,0.9758,2.4706
+ZINC_purchasable_22,ZINC_purchasable,made (purchasable),C[C@H](N)CCN[C@@H]1CCCC12CCCC2,4.1145,0.9759,6.0742
+ZINC_purchasable_23,ZINC_purchasable,made (purchasable),OC(O)=c1cccc2c1=C(O)CC[C@H]2O,3.7711,0.8521,8.8964
+ZINC_purchasable_24,ZINC_purchasable,made (purchasable),CNC(=O)CCCN1C[C@@H](C)C[C@H](C)C1,2.8492,0.9946,3.7836
+Enamine_on_demand_00,Enamine_on_demand,made (2-3 steps),COC(=O)c1ccoc1C(=O)N1CCc2cc(Cl)c(O)cc2C1,2.5699,0.9797,3.9793
+Enamine_on_demand_01,Enamine_on_demand,made (2-3 steps),O=C(NC1CN(C(=O)CCF)CC2(CC2)C1)C1CCN(Cc2ccccc2)CC1,3.457,0.9904,4.5842
+Enamine_on_demand_02,Enamine_on_demand,made (2-3 steps),Cc1cnn(CC2CN(C(=O)CCOC3CCC3)CCO2)c1,3.0505,0.9956,2.7836
+Enamine_on_demand_03,Enamine_on_demand,made (2-3 steps),CC(C)c1c[nH]nc1CNc1ncnc2c1c(Br)cn2C1CC1,3.2062,0.9802,4.5038
+Enamine_on_demand_04,Enamine_on_demand,made (2-3 steps),COC(=O)c1ccn2c1CN(C(=O)c1cnn(C(C)(C)C)c1N)CC2,3.0251,0.9744,4.1778
+Enamine_on_demand_05,Enamine_on_demand,made (2-3 steps),C[C@H](CNC(=O)C1(C#N)CCCC1)NC(=O)C1COCCOC1,3.3495,0.9401,3.9129
+Enamine_on_demand_06,Enamine_on_demand,made (2-3 steps),O=C(O)Cc1cccc(CNC(=O)NC[C@]2(CO)C[C@H]2c2ccccc2)c1,3.1397,0.8284,4.9221
+Enamine_on_demand_07,Enamine_on_demand,made (2-3 steps),COC(=O)C1C[C@H]2C[C@@H]1C[C@H]2NCc1cc2c(C)cc(C)cc2[nH]1,4.5235,0.7112,6.7426
+Enamine_on_demand_08,Enamine_on_demand,made (2-3 steps),Cc1c(C(=O)Nc2ccc(-c3noc(C(F)(F)F)n3)cc2)nn2c1CCCC2,2.7149,0.9891,4.5738
+Enamine_on_demand_09,Enamine_on_demand,made (2-3 steps),CCOC(=O)CCC(=O)N1CCN(C(=O)C2CC(N(C)C)C2)CC(C)(F)C1,3.3077,0.2501,3.9189
+Enamine_on_demand_10,Enamine_on_demand,made (2-3 steps),O=C(Nc1ccc2oc(CO)cc2c1)C12CCOC1CS(=O)(=O)C2,3.8983,0.9313,5.873
+Enamine_on_demand_11,Enamine_on_demand,made (2-3 steps),COc1ccc(C(=O)NC[C@@H]2C[C@H](C)CCN2C(=O)CC2OCCC2(C)C)o1,4.0365,0.1952,5.1073
+Enamine_on_demand_12,Enamine_on_demand,made (2-3 steps),Cn1ccnc1C(NC(=O)NCCc1cccc(C#N)n1)c1ccc(F)c(F)c1,3.059,0.9948,3.0248
+Enamine_on_demand_13,Enamine_on_demand,made (2-3 steps),CCOC(=O)C(CC)(CC)NC(=O)C1[C@H]2CCOC[C@@H]12,3.8928,0.9266,5.526
+Enamine_on_demand_14,Enamine_on_demand,made (2-3 steps),CCc1cccc2c(F)c(C(=O)N3CC4(CCOC(=O)N4)C3)[nH]c12,3.6115,0.927,6.1137
+Enamine_on_demand_15,Enamine_on_demand,made (2-3 steps),COC(=O)CS(=O)(=O)CC(=O)N1CCC(C)N(C(=O)C2[C@H]3CCC[C@@H]23)CC1,3.8552,0.7298,6.101
+Enamine_on_demand_16,Enamine_on_demand,made (2-3 steps),CN(C)C(=O)Cn1cnc(NC(=O)N2Cc3ccccc3C3(CCCCC3)C2)n1,3.2184,0.9283,4.3601
+Enamine_on_demand_17,Enamine_on_demand,made (2-3 steps),C[C@@H]1C[C@@]1(F)C(=O)N[C@@H]1COC[C@@H]1NC(=O)c1ccnc(C(C)(C)C)n1,4.2147,0.3401,5.2523
+Enamine_on_demand_18,Enamine_on_demand,made (2-3 steps),CC1=C(c2ccc(OC(C)C)c(F)c2)CCNC1,2.615,0.9678,3.7846
+Enamine_on_demand_19,Enamine_on_demand,made (2-3 steps),CCC(C)c1ccccc1OCC(=O)NC[C@H]1C[C@@H](n2ccnc2)C1,2.9246,0.9715,3.2667
+Enamine_on_demand_20,Enamine_on_demand,made (2-3 steps),COC1(CC(=O)N2CCC(c3csc(C)n3)CC2)CNC1,3.0251,0.9801,3.504
+Enamine_on_demand_21,Enamine_on_demand,made (2-3 steps),COC(=O)C1COCC[C@@H]1NC(=O)c1cccn2cc(C(F)(F)F)nc12,3.4935,0.9421,4.6702
+Enamine_on_demand_22,Enamine_on_demand,made (2-3 steps),CN(C)[C@@H]1C[C@H]2C[C@@H]1N(C(=O)c1cc3n(n1)CCOC3)C2,4.8063,0.8505,6.9241
+Enamine_on_demand_23,Enamine_on_demand,made (2-3 steps),Cc1cc(C(=O)NCC2CCN(c3ccc(Br)cc3)C2)[nH]c1C#N,3.077,0.9943,4.2479
+Enamine_on_demand_24,Enamine_on_demand,made (2-3 steps),CC(C)(C)c1cccc(OCC(=O)N2CC(n3cc(CO)nn3)CCC2(C)C)c1,3.2921,0.9205,3.7091
+THQ_made_assayed_00,THQ_made_assayed,"made (1 step, assayed)",Oc1c(Br)cc(Br)c([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)c1Br,5.1191,0.0308,8.561
+THQ_made_assayed_01,THQ_made_assayed,"made (1 step, assayed)",NS(=O)(=O)c1ccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.6526,0.0324,8.1343
+THQ_made_assayed_02,THQ_made_assayed,"made (1 step, assayed)",Oc1cccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)c1Cl,4.7959,0.0293,8.5464
+THQ_made_assayed_03,THQ_made_assayed,"made (1 step, assayed)",NNC(=O)c1ccc([C@@H]2Nc3c(ccc4[nH]nc(N)c34)C3C4CC[C@@H](C4)C32)cc1,4.7595,0.04,7.8624
+THQ_made_assayed_04,THQ_made_assayed,"made (1 step, assayed)",CS(=O)(=O)Nc1cccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)c1,4.707,0.102,7.8588
+THQ_made_assayed_05,THQ_made_assayed,"made (1 step, assayed)",CC(C)c1cc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc(C(C)C)c1O,4.9603,0.0419,8.4965
+THQ_made_assayed_06,THQ_made_assayed,"made (1 step, assayed)",c1cc2[nH]ncc2cc1[C@@H]1Nc2c(ccc3[nH]ncc23)[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.8403,0.0255,8.0605
+THQ_made_assayed_07,THQ_made_assayed,"made (1 step, assayed)",O=C(O)c1ccc2c(c1)[C@H]1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1ccc(CO)cc1)N2,4.2916,0.0493,8.1614
+THQ_made_assayed_08,THQ_made_assayed,"made (1 step, assayed)",COc1cnc(NS(=O)(=O)c2ccc3c(c2)[C@H]2[C@@H]4CC[C@@H](C4)[C@H]2[C@H](c2cccn2S(=O)(=O)c2ccc(C)cc2)N3)nc1,4.9425,0.1854,7.9832
+THQ_made_assayed_09,THQ_made_assayed,"made (1 step, assayed)",Oc1ccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)c(OC(F)(F)F)c1,4.9006,0.1011,8.4949
+THQ_made_assayed_10,THQ_made_assayed,"made (1 step, assayed)",COc1cc([C@@H]2C[C@H](c3ccc4[nH]ncc4c3)Nc3ccc4[nH]ncc4c32)ccc1O,3.6459,0.495,5.6163
+THQ_made_assayed_11,THQ_made_assayed,"made (1 step, assayed)",CC(=O)Nc1ccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.5573,0.062,8.4585
+THQ_made_assayed_12,THQ_made_assayed,"made (1 step, assayed)",c1cnc2[nH]cc([C@@H]3Nc4c(ccc5[nH]ncc45)[C@H]4[C@@H]5CC[C@@H](C5)[C@H]43)c2c1,4.8672,0.0116,8.2445
+THQ_made_assayed_13,THQ_made_assayed,"made (1 step, assayed)",NC(=O)c1ccc([C@@H]2Nc3c(ccc4[nH]nc(Br)c34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.8064,0.0348,8.7472
+THQ_made_assayed_14,THQ_made_assayed,"made (1 step, assayed)",NC(=O)c1ccc([C@@H]2Nc3c(ccc4[nH]nc(N)c34)C3C4CC[C@@H](C4)C32)cc1,4.7009,0.0406,8.0209
+THQ_made_assayed_15,THQ_made_assayed,"made (1 step, assayed)",CS(=O)(=O)Nc1ccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.6576,0.0895,8.1112
+THQ_made_assayed_16,THQ_made_assayed,"made (1 step, assayed)",COc1cc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)ccc1OCC(N)=O,4.6743,0.0249,7.8237
+THQ_made_assayed_17,THQ_made_assayed,"made (1 step, assayed)",CS(=O)(=O)Nc1cccc([C@@H]2Nc3c4cccnc4nn3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)c1,4.9824,0.1875,8.9709
+THQ_made_assayed_18,THQ_made_assayed,"made (1 step, assayed)",OCc1ccc([C@@H]2Nc3c[nH]nc3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.8706,0.0359,9.0312
+THQ_made_assayed_19,THQ_made_assayed,"made (1 step, assayed)",NS(=O)(=O)c1cccc2c1N[C@@H](c1ccc(CO)cc1)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,4.5226,0.0846,8.8155
+THQ_made_assayed_20,THQ_made_assayed,"made (1 step, assayed)",COc1cc(OCC(=O)O)ccc1[C@@H]1Nc2c(ccc3[nH]ncc23)[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.6914,0.065,8.3215
+THQ_made_assayed_21,THQ_made_assayed,"made (1 step, assayed)",c1ccc2c([C@@H]3Nc4c(ccc5[nH]ncc45)[C@H]4[C@@H]5CC[C@@H](C5)[C@H]43)[nH]nc2c1,4.8686,0.0134,8.7054
+THQ_made_assayed_22,THQ_made_assayed,"made (1 step, assayed)",c1csc([C@@H]2C[C@H](c3ccc4[nH]ncc4c3)Nc3ccc4[nH]ncc4c32)c1,3.7403,0.3851,5.4581
+THQ_made_assayed_23,THQ_made_assayed,"made (1 step, assayed)",O=C(O)c1ccc([C@@H]2Nc3c(ccc4[nH]ncc34)[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.5619,0.0505,8.4305
+THQ_made_assayed_24,THQ_made_assayed,"made (1 step, assayed)",COc1cc([C@@H]2C[C@H](c3ccc(C(N)=O)cc3)Nc3c2[nH]c2ncc(Br)cc32)ccc1O,3.627,0.3397,6.5728
+THQ_library_00,THQ_library,"made (1 step, demonstrated)",O=c1[nH]c(=S)[nH]c2c1[C@H]1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1c[nH]c3cccc(OCc4ccccc4)c13)N2,4.925,0.0805,9.0756
+THQ_library_01,THQ_library,"made (1 step, demonstrated)",CNC(=O)COc1ccccc1[C@@H]1Nc2c(CO)cc(Br)cc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.6559,0.0286,8.7538
+THQ_library_02,THQ_library,"made (1 step, demonstrated)",NC(=O)c1cc2c(cc1F)N[C@@H](c1c[nH]c3cc(Br)cnc13)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,4.9343,0.1316,7.7536
+THQ_library_03,THQ_library,"made (1 step, demonstrated)",COC(=O)c1cc2c(c3[nH]ccc13)C1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1[nH]nc3c(C(=O)OC)cccc13)N2,5.087,0.0371,9.3007
+THQ_library_04,THQ_library,"made (1 step, demonstrated)",C=CCc1c(O)cccc1[C@@H]1Nc2cc(CNC(=O)OC(C)(C)C)ccc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.8134,0.0108,8.3689
+THQ_library_05,THQ_library,"made (1 step, demonstrated)",CCOc1ccc(-c2[nH]ncc2[C@@H]2Nc3c(ccc(Br)c3O)C3[C@@H]4CC[C@@H](C4)[C@H]32)cc1,4.803,0.0133,8.3484
+THQ_library_06,THQ_library,"made (1 step, demonstrated)",NC(=O)c1ccc2c(c1)N[C@@H](c1c[nH]c3ncncc13)[C@H]1C2[C@@H]2CC[C@H]1C2,4.8294,0.0652,7.9404
+THQ_library_07,THQ_library,"made (1 step, demonstrated)",COC(=O)c1ccc2c(c1O)N[C@@H](c1c(C)n(C)c3ccc(O)cc13)[C@H]1C2[C@@H]2CC[C@H]1C2,4.8823,0.0207,8.6607
+THQ_library_08,THQ_library,"made (1 step, demonstrated)",COc1cc(Br)c([C@@H]2Nc3c(SCC(N)=O)cccc3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1O,4.8068,0.0644,8.4208
+THQ_library_09,THQ_library,"made (1 step, demonstrated)",Oc1c(F)cc(F)c2c1[C@H]1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1ncc[nH]1)N2,5.1405,0.0732,8.6849
+THQ_library_10,THQ_library,"made (1 step, demonstrated)",Cc1[nH]ncc1[C@@H]1Nc2c(O)cc(C#N)cc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,5.0496,0.0501,8.8004
+THQ_library_11,THQ_library,"made (1 step, demonstrated)",Cc1[nH]ncc1[C@@H]1Nc2cc(O)c(C(N)=O)cc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.9406,0.0991,8.3518
+THQ_library_12,THQ_library,"made (1 step, demonstrated)",Cc1cc2c(cc1NC(=O)OC(C)(C)C)N[C@@H](c1ccc(OCCNC(=O)OC(C)(C)C)cc1)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,4.6973,0.1271,7.7696
+THQ_library_13,THQ_library,"made (1 step, demonstrated)",CC(C)(C)OC(=O)Nc1ccncc1[C@@H]1Nc2cc(CO)ccc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.7339,0.1192,8.3048
+THQ_library_14,THQ_library,"made (1 step, demonstrated)",Cc1[nH][nH]c(=O)c1[C@@H]1Nc2c(cc(F)cc2S(N)(=O)=O)[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,5.1684,0.0189,9.0436
+THQ_library_15,THQ_library,"made (1 step, demonstrated)",CC(C)c1cc([C@@H]2Nc3c[nH]nc3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc(C(C)C)c1O,5.1921,0.0397,9.1557
+THQ_library_16,THQ_library,"made (1 step, demonstrated)",OCc1cccc2c1N[C@@H](c1cc(O)cc(O)c1)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,4.6785,0.0233,8.9812
+THQ_library_17,THQ_library,"made (1 step, demonstrated)",Cc1c(O)cccc1[C@@H]1Nc2c(C(=O)Nc3ccccc3)cc(F)cc2[C@H]2[C@@H]3CC[C@@H](C3)[C@H]21,4.5565,0.0398,8.8136
+THQ_library_18,THQ_library,"made (1 step, demonstrated)",Cc1cc2c[nH]nc2c2c1N[C@@H](c1[nH]cnc1C)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,5.4808,0.0514,8.6686
+THQ_library_19,THQ_library,"made (1 step, demonstrated)",OCc1cc2c(cc1Cl)N[C@@H](c1ccc(Cl)c(O)c1Cl)[C@@H]1[C@H]3CC[C@H](C3)[C@H]21,4.8298,0.0219,8.2345
+THQ_library_20,THQ_library,"made (1 step, demonstrated)",O=C(Nc1ccc([C@@H]2Nc3cc(CO)cc(O)c3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1)OCc1ccccc1,4.5033,0.0034,8.6669
+THQ_library_21,THQ_library,"made (1 step, demonstrated)",COc1ccc2[nH]cc([C@@H]3Nc4cc(O)c(C(=O)OC(C)(C)C)cc4[C@H]4[C@@H]5CC[C@@H](C5)[C@H]43)c2c1,4.7479,0.0563,7.8893
+THQ_library_22,THQ_library,"made (1 step, demonstrated)",CNC(=O)c1ccc2c(c1)[C@H]1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1c[nH]c3cccc(O)c13)N2,4.6681,0.0301,7.9133
+THQ_library_23,THQ_library,"made (1 step, demonstrated)",Oc1ccc([C@@H]2Nc3c(O)cc(F)cc3[C@H]3[C@@H]4CC[C@@H](C4)[C@H]32)cc1Cl,4.6411,0.0808,8.365
+THQ_library_24,THQ_library,"made (1 step, demonstrated)",O=C1NCCN1c1ccc2c(c1)[C@H]1[C@@H]3CC[C@@H](C3)[C@H]1[C@H](c1ccc3[nH]ncc3c1)N2,4.7754,0.0915,7.2342
+ChEMBL_kinase_00,ChEMBL_kinase,made (steps unknown),CCOC(=O)c1c(Nc2ccc(I)cc2Cl)sc2c1CC(C)(C)CNC2=O,2.935,0.7879,4.7363
+ChEMBL_kinase_01,ChEMBL_kinase,made (steps unknown),CCn1cnc2c(N)nc(N(c3cccc(Cl)c3)[C@@H]3CCCC[C@@H]3N)nc21,3.5968,0.7802,5.5182
+ChEMBL_kinase_02,ChEMBL_kinase,made (steps unknown),CN(C)C/C=C/C(=O)Nc1cc2c(Nc3ccc(F)c(Cl)c3)ncnc2cc1O[C@H]1CCOC1,3.2768,0.9498,4.0053
+ChEMBL_kinase_03,ChEMBL_kinase,made (steps unknown),CCn1c(-c2nonc2N)nc2c(N3CCCC3)nccc21,2.7437,0.9621,4.1654
+ChEMBL_kinase_04,ChEMBL_kinase,made (steps unknown),Cc1nn(C)c2c1c(=O)c1cc(Cl)ccc1n2OCC(C)C,2.8094,0.0531,6.2415
+ChEMBL_kinase_05,ChEMBL_kinase,made (steps unknown),COc1ccc(-c2nc3cc(-c4csc(C(=O)NCC(C)C)c4)cnc3[nH]2)cc1,2.5283,0.9747,3.149
+ChEMBL_kinase_06,ChEMBL_kinase,made (steps unknown),Cc1c[nH]c(-c2cnc(NCCNc3ccc(C#N)cn3)nc2-c2ccc(Cl)cc2Cl)n1,3.0409,0.9726,2.7531
+ChEMBL_kinase_07,ChEMBL_kinase,made (steps unknown),N=C(NCC1CCCCC1)c1c(Nc2ccc(N=Nc3ccccc3)cc2)s[nH]c1=O,2.9877,0.9586,6.0252
+ChEMBL_kinase_08,ChEMBL_kinase,made (steps unknown),CC(=O)O[C@@H]1[C@@H](OC(C)=O)[C@@H](O)[C@H](Oc2c(-c3ccc(O)cc3)oc3cc(O)cc(O)c3c2=O)O[C@H]1C,4.0684,0.01,6.5519
+ChEMBL_kinase_09,ChEMBL_kinase,made (steps unknown),CC(=O)Nc1ccccc1Sc1c(C#N)c(C#N)c2sc3ccccc3n12,2.8708,0.8002,5.9911
+ChEMBL_kinase_10,ChEMBL_kinase,made (steps unknown),C[C@@H]1C[C@H]2CN1CCn1[nH]c3c(cccc3c1=O)-c1nc3c(cccc3[nH]c1=O)O2,5.7637,0.7897,10.0
+ChEMBL_kinase_11,ChEMBL_kinase,made (steps unknown),CN(C)CCCC(=O)Nc1ccc2ncnc(Nc3cccc(Br)c3)c2c1,2.1673,0.9922,2.8173
+ChEMBL_kinase_12,ChEMBL_kinase,made (steps unknown),Fc1cccc(COc2ccc(Nc3ncnc4sc(-c5ccco5)cc34)cc2Cl)c1,2.4667,0.9597,3.3059
+ChEMBL_kinase_13,ChEMBL_kinase,made (steps unknown),CNC(=O)N1CCN(Cc2ccnc(Nc3ncc(C#N)s3)c2)CC1,2.6621,0.9875,2.7843
+ChEMBL_kinase_14,ChEMBL_kinase,made (steps unknown),COc1cc2c(Nc3ccc(Sc4nccn4C)cc3)c(C#N)cnc2cc1OCCCN1CCOCC1,2.7727,0.962,3.1688
+ChEMBL_kinase_15,ChEMBL_kinase,made (steps unknown),C[C@@]1(C(=O)Nc2ccc(F)nc2)CCCN1c1nc(Nc2cc(C3CC3)[nH]n2)c2cccn2n1,3.649,0.9157,4.9523
+ChEMBL_kinase_16,ChEMBL_kinase,made (steps unknown),C=CC(=O)Nc1ccc(C(=O)Nc2[nH]nc3ccc(-c4cncc(NC[C@@H](O)c5ccccc5)c4)cc23)cc1,3.1786,0.942,4.6414
+ChEMBL_kinase_17,ChEMBL_kinase,made (steps unknown),CCN1CCN(c2ccc(Nc3ncc(Cl)c(Nc4ccc5[nH]ncc5c4)n3)cc2)CC1,2.4771,0.9609,3.1053
+ChEMBL_kinase_18,ChEMBL_kinase,made (steps unknown),[2H]C([2H])([2H])Oc1cccc(C(C)NC(=O)c2sc(-c3ccncc3)nc2C)c1,3.558,0.9946,3.1167
+ChEMBL_kinase_19,ChEMBL_kinase,made (steps unknown),CCN1CCN(Cc2ccc(NC(=O)c3ccc(C)c(C#Cc4cccnc4)c3)cc2C(F)(F)F)CC1,2.6031,0.9988,2.767
+ChEMBL_kinase_20,ChEMBL_kinase,made (steps unknown),c1cc(-c2cnn3cc(-c4ccc(OCCN5CCCCC5)cc4)cnc23)ccn1,2.37,0.9895,3.3608
+ChEMBL_kinase_21,ChEMBL_kinase,made (steps unknown),Cc1nc(-c2nc[nH]n2)ccc1-c1cnc2c(n1)N([C@H]1CC[C@H](O)CC1)C(=O)CN2,3.4781,0.6048,4.1947
+ChEMBL_kinase_22,ChEMBL_kinase,made (steps unknown),COC(=O)/C(=C/c1ccc(OC)c(OC)c1)c1ccc(OC)c(OC)c1,2.0299,0.9874,3.0408
+ChEMBL_kinase_23,ChEMBL_kinase,made (steps unknown),COc1cc2ncc(C#N)c(Nc3cccc(Oc4ccccc4)c3)c2cc1OC,2.1812,0.9901,2.7912
+ChEMBL_kinase_24,ChEMBL_kinase,made (steps unknown),CNC(=O)c1cnc2[nH]ccc2c1N[C@@H]1CCN(Cc2ccc(Cl)cc2)[C@H](C)C1,3.3005,0.8716,4.9017
+BRICS_generated_00,BRICS_generated,no evidence of existence,CCn1cc(-c2cnn(-c3cnn(CC)c3)c2)cn1,2.6669,0.9684,2.5556
+BRICS_generated_01,BRICS_generated,no evidence of existence,CC(C)c1c(-c2cnn(C)c2-c2cnn(C)c2C(C)C)cnn1C,3.199,0.9036,5.6182
+BRICS_generated_02,BRICS_generated,no evidence of existence,Cc1cnc(C2CC2F)nc1-c1ncc(C)c(C2CC2F)n1,4.392,0.4674,6.425
+BRICS_generated_03,BRICS_generated,no evidence of existence,CC(C)c1cccc(-c2nn(C)cc2-c2cn(C)nc2C(C)C)c1,2.5952,0.9235,3.1172
+BRICS_generated_04,BRICS_generated,no evidence of existence,Cc1nc(-c2[nH]c(C)nc2OC(F)F)c(OC(F)F)[nH]1,3.5777,0.7833,6.5552
+BRICS_generated_05,BRICS_generated,no evidence of existence,CN1CCN(S(=O)(=O)c2ccccc2Cl)CC1,1.7837,0.9967,1.8588
+BRICS_generated_06,BRICS_generated,no evidence of existence,CCn1nc(OC(F)F)c2c(N)ncnc21,2.8395,0.9842,4.3854
+BRICS_generated_07,BRICS_generated,no evidence of existence,NS(=O)(=O)c1cccc(C2COC2)c1,2.2056,0.9695,2.3567
+BRICS_generated_08,BRICS_generated,no evidence of existence,Cn1ncc(-c2ccc(C#N)c(Cl)c2)c1-c1cnn(C)c1N1CCC(O)CC1,2.9408,0.9795,3.7939
+BRICS_generated_09,BRICS_generated,no evidence of existence,COc1ncc(Cl)c(-c2ncc(Cl)c(-c3ncc(Cl)c(C4COC4)n3)n2)n1,3.2925,0.4712,4.3059
+BRICS_generated_10,BRICS_generated,no evidence of existence,OC1CCN(c2ncnc3[nH]ccc23)CC1,2.4378,0.986,2.6879
+BRICS_generated_11,BRICS_generated,no evidence of existence,c1ccc(N2CCCC2)c(-c2cc(N3CCCC3)cc3[nH]ncc23)c1,2.3245,0.9967,3.2954
+BRICS_generated_12,BRICS_generated,no evidence of existence,Fc1c(Cl)ccc(N2CCc3[nH]c(N4CCc5[nH]c(C6COC6)nc5C4)nc3C2)c1C1COC1,3.7044,0.1736,5.5644
+BRICS_generated_13,BRICS_generated,no evidence of existence,CCc1cc(O)c(Cl)cc1-n1nc(C)cc1-c1nn(CC)c2ncnc(N)c12,2.9722,0.5948,3.8643
+BRICS_generated_14,BRICS_generated,no evidence of existence,CCCc1ncc(Cl)c(-c2nc(CCC)ncc2Cl)n1,2.7962,0.9351,3.5534
+BRICS_generated_15,BRICS_generated,no evidence of existence,CC(O)c1cccc(-c2cccc(C3CCC3)c2F)c1F,2.7218,0.971,3.7874
+BRICS_generated_16,BRICS_generated,no evidence of existence,CC1CCN(c2cc3c(cn2)c(=O)[nH]n3C2CN(c3ncc[nH]3)CCC2C)CC1c1ncc[nH]1,4.6605,0.2003,6.4103
+BRICS_generated_17,BRICS_generated,no evidence of existence,COc1cc(-c2ocnc2C)c(OC)c(-c2ocnc2C)c1,3.0068,0.8789,3.8675
+BRICS_generated_18,BRICS_generated,no evidence of existence,COc1cc(-c2ocnc2C)cc(-c2ocnc2C)c1-c1ocnc1C,3.2673,0.9113,4.6648
+BRICS_generated_19,BRICS_generated,no evidence of existence,CN1CCN(C2CCCN(C3CCCN(c4ccc(O)c(Cl)c4)C3)C2)CC1,3.1223,0.9721,3.0727
+BRICS_generated_20,BRICS_generated,no evidence of existence,Cc1cc(-c2cccc(S(=O)(=O)N3CCC(N4CCC(c5cc(C)n(C)n5)CC4)CC3)c2)nn1C,2.7876,0.9321,2.7232
+BRICS_generated_21,BRICS_generated,no evidence of existence,CN1CCc2[nH]c(-c3cnn(-c4nc5c([nH]4)CCN(C)C5)c3)nc2C1,3.4569,0.8733,4.4065
+BRICS_generated_22,BRICS_generated,no evidence of existence,Cc1cc(N2CCC(S(=O)(=O)c3cccc(O)c3)C2)nc(C)n1,2.961,0.9892,3.1393
+BRICS_generated_23,BRICS_generated,no evidence of existence,Cc1cnc(-c2ncc(C)c(C3CC3F)n2)nc1-c1nc(C2CC2F)c2c(=O)[nH]ncc2n1,4.6777,0.2857,7.0199
+BRICS_generated_24,BRICS_generated,no evidence of existence,CNC1CN(C2CN(C(=O)CC#N)CCC2C)CCC1C,3.9352,0.7047,4.0292
+GDB17_enumerated_00,GDB17_enumerated,no evidence of existence,CC12c3nc4n5c3C3C(C5(C#N)C1C4)C32O,5.9064,0.0377,10.0
+GDB17_enumerated_01,GDB17_enumerated,no evidence of existence,CC12C3OC4c5cc(=NO)cc3n5C1C42C#N,5.8849,0.0261,10.0
+GDB17_enumerated_02,GDB17_enumerated,no evidence of existence,CC1=C2C=C3CC1C14CC(CN)=CC31C24,6.3052,0.1203,10.0
+GDB17_enumerated_03,GDB17_enumerated,no evidence of existence,CC1=Cc2onc3c2C1C1C3C1(C)C#N,5.2813,0.1436,10.0
+GDB17_enumerated_04,GDB17_enumerated,no evidence of existence,CC#CC12C3=C(C)C4=CC(C=C3)C1(N)C42,5.6435,0.0845,10.0
+GDB17_enumerated_05,GDB17_enumerated,no evidence of existence,CC1c2[nH]nc3c2C24C=CCC2(C3)CN14,5.8347,0.0393,10.0
+GDB17_enumerated_06,GDB17_enumerated,no evidence of existence,CC1CC2C=C3c4c(cc1n42)C=CC3O,5.0822,0.0393,9.8202
+GDB17_enumerated_07,GDB17_enumerated,no evidence of existence,CC12C3=Cc4cnn(c41)CC2C1CC1C3,5.1956,0.3141,9.7556
+GDB17_enumerated_08,GDB17_enumerated,no evidence of existence,CC1=CC2c3c1cc1n3C3C4C1(O)C=CC234,6.1814,0.0303,10.0
+GDB17_enumerated_09,GDB17_enumerated,no evidence of existence,C#CC1CC2c3c1c(C)c(N)n3C2C#N,5.123,0.0212,10.0
+GDB17_enumerated_10,GDB17_enumerated,no evidence of existence,CC1=CC2C3Cc4ccnc5c4C23C1N5,5.3609,0.0439,10.0
+GDB17_enumerated_11,GDB17_enumerated,no evidence of existence,C#CC12C3=CCC1(C)C2C1=C3C(=N)OC1,5.4046,0.0729,10.0
+GDB17_enumerated_12,GDB17_enumerated,no evidence of existence,CC12c3c[nH]c4c3C3C5C1C2OC35C4,6.0153,0.0203,10.0
+GDB17_enumerated_13,GDB17_enumerated,no evidence of existence,C#CC1=C2C=C3C=CC(C)=C1C1(C)C3C21,5.1807,0.1051,10.0
+GDB17_enumerated_14,GDB17_enumerated,no evidence of existence,CC12C3=NC4C(C#N)=CC(=CC1O3)C42C,5.6725,0.0471,10.0
+GDB17_enumerated_15,GDB17_enumerated,no evidence of existence,CC12C=CC3C=C(c4cc(N)c[nH]4)C1C32,5.0811,0.1091,9.5954
+GDB17_enumerated_16,GDB17_enumerated,no evidence of existence,CC12c3ccn4c3C3C(N31)C4(C#N)C2O,5.6807,0.067,10.0
+GDB17_enumerated_17,GDB17_enumerated,no evidence of existence,CC12C3=C4C5C(N51)C1(S(N)(=O)=O)C4C(=CC21)C3,6.0315,0.0979,10.0
+GDB17_enumerated_18,GDB17_enumerated,no evidence of existence,CC12C3=C4C=C5C=CC3C3C1C2C4C53N,5.8839,0.1454,10.0
+GDB17_enumerated_19,GDB17_enumerated,no evidence of existence,CC1CC23c4ccn5c4C4=C(C5)C1C2C43,5.7947,0.1219,10.0
+GDB17_enumerated_20,GDB17_enumerated,no evidence of existence,CC1Cc2ccc3[nH]nc4c3c2C12OC42,4.9628,0.1024,9.0141
+GDB17_enumerated_21,GDB17_enumerated,no evidence of existence,C1=NCC23C4=CC5=CCC(=C4)C2(CO1)C53,6.4247,0.1823,10.0
+GDB17_enumerated_22,GDB17_enumerated,no evidence of existence,C1=CC2n3nncc3C34CC=C1C23C4,5.6611,0.2043,9.328
+GDB17_enumerated_23,GDB17_enumerated,no evidence of existence,C1=CC2CC23c2c([nH]c4c[nH]nc24)CC13,5.5775,0.6721,9.603
+GDB17_enumerated_24,GDB17_enumerated,no evidence of existence,C1=C2C3=C(Cc4c[nH]nc43)C3CC(C1)C23,5.0784,0.09,8.4001

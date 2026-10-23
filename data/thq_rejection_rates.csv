@@ -1,0 +1,5 @@
+metric,median,published,rejected_published,kinase_calibrated,rejected_kinase
+SAscore,4.776,6.0,0.0,4.528,49
+SCScore,4.574,,,5.0,0
+RAscore,0.047,0.5,56.0,0.098,42
+BR-SAScore,8.203,,,7.069,51

@@ -1,0 +1,5 @@
+metric,median,published_cutoff,rejected_published,pct_published,kinase_cutoff,rejected_kinase,pct_kinase
+SAscore,4.847,6.0,0.0,0.0,4.528,9467,94.67
+SCScore,4.346,,,,5.0,57,0.57
+RAscore,0.044,0.5,9907.0,99.07,0.098,8016,80.16
+BR-SAScore,8.392,,,,7.069,10000,100.0
