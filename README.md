@@ -1,5 +1,7 @@
 # synthscore
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23601853.svg)](https://doi.org/10.5281/zenodo.23601853)
+
 A benchmark for synthesizability prediction, built from reference sets whose makeability is known
 independently of any score, together with the code that produced the results in the accompanying paper.
 
