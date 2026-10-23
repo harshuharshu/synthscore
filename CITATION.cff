@@ -1,25 +1,38 @@
 cff-version: 1.2.0
-message: "If you use this software or the derived data, please cite it as below."
-title: "synthscore: target-class calibrated synthesizability scoring"
+message: "If you use this benchmark, the reference sets or the derived data, please cite it as below."
+title: "synthscore: a makeability benchmark for synthesizability prediction"
 abstract: >-
-  Synthesizability scores are deployed as hard filters with a single global
-  cutoff. Measured against 26,947 ChEMBL compounds that each carry a recorded
-  activity, and are therefore known to have been synthesized, those cutoffs
-  discard real chemistry at rates that depend on the target class rather than
-  the molecule: SAscore at its published cutoff of 6.0 rejects 9.48% of
-  whole-cell antibacterial compounds and 0.29% of nuclear-receptor compounds.
-  This package supplies per-target-class operating points calibrated to a
-  declared false-reject rate, and a tool that applies them.
+  Synthesizability scores gate most generative and virtual-screening workflows
+  at a published global cutoff, and what those cutoffs discard had not been
+  measured, because measuring it requires molecules whose route length is known
+  independently of any score. This release supplies six reference sets ordered
+  by what is independently known about each, from purchasable compounds through
+  make-on-demand chemistry of stated step count to sets with no record of
+  synthesis, together with the scorer panel and the code that produced the
+  results. Scoring them inverts the expected relationship: a 10,000-member
+  tetrahydroquinoline library demonstrated to be one step from commercial
+  building blocks is rejected by RAscore at its published cutoff in 9,907 of
+  10,000 cases, while a fragment-recombination library that has never been made
+  scores like purchasable compounds. Retrosynthesis search reproduces the
+  inversion rather than correcting it, finding complete routes for 40% of
+  never-made recombination products against 1 of 50 one-step compounds. The
+  scores rank molecules by resemblance to historical catalogue chemistry rather
+  than by synthetic accessibility, and because the field's current easy versus
+  hard benchmark varies makeability and catalogue resemblance together, a score
+  capturing only the second would appear to succeed on it. The six sets populate
+  the cells that comparison omits. Per-target-class operating points are
+  included but are documented as a remedy that does not work.
 authors:
   - family-names: "Tiwari"
     given-names: "Harshita"
 version: "1.0.0"
-date-released: "2026-10-22"
+date-released: "2026-10-23"
 license: MIT
 keywords:
   - synthetic accessibility
   - synthesizability
+  - retrosynthesis
+  - benchmark
+  - applicability domain
   - cheminformatics
   - de novo design
-  - calibration
-  - ChEMBL
